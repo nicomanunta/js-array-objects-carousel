@@ -17,6 +17,9 @@
     width: 700px;
     height: 300px;
 }
+.images{
+    height: 100%;
+}
 
 .item {
     height: 100%;
