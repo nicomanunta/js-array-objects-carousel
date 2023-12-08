@@ -45,18 +45,27 @@ immagineVisualizzata[activeElement].classList.add("active")
 
 
 document.querySelector(".next").addEventListener("click", function(){
-
     immagineVisualizzata[activeElement].classList.remove("active")
-    activeElement ++
+    if(activeElement == images.length - 1){
+        activeElement = 0
+    }else{
+        
+        activeElement ++
+    }
     immagineVisualizzata[activeElement].classList.add("active")
 
 
 });
 document.querySelector(".prev").addEventListener("click", function(){
     immagineVisualizzata[activeElement].classList.remove("active")
-    activeElement --
+    if(activeElement == 0){
+        activeElement = images.length - 1
+    }else{
+        activeElement --
+    }
     immagineVisualizzata[activeElement].classList.add("active")
 });
+
 
 
 
